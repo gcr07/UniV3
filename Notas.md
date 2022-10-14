@@ -67,9 +67,17 @@ main_url="https://0ad500f40378426ec0e710a000e1005f.web-security-academy.net"
 ```
 
 
+# ETH
 
+## TX internas vs Tx Externas
 
+The Internal Transactions tab lists all transactions initiated by internal accounts as a result of one or more preceding transactions.
 
+Pagina donde se explica TX interna y Tx externas ademas se ve un SPAM token
+>https://www.sitepoint.com/ethereum-internal-transactions-token-transfers/
+
+Tokens SCAM
+>https://www.criptonoticias.com/seguridad-bitcoin/token-scam-esta-siendo-usado-robar-carteras-metamask-contamos-funciona/
 
 
 

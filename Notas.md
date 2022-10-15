@@ -81,6 +81,109 @@ Tokens SCAM
 
 
 
+# Python y ETH
+
+Este es un codigo modificado por mi.
+
+```python
+# 0bjectives :
+# 1. Request the attacke rs obfuscated code
+# 2. Parse out the attackers address from that code
+# 3. Update our running list of attacke r Addresses
+# 4. Log the Attackers addresses to disk with time and date
+# 5. Setup a Timing interval to check for new add resses
+#!/usr/bin/python3
+
+# re de expreciones regulares
+import requests, re, time
+from datetime import datetime
+
+attackers_list = [line.rstrip() for line in open("attackersAddress.txt")]
+
+# for line in open("attackersAddress.txt"):
+#    print(line.rstrip())
+
+# txt = "     banana     "
+
+# x = txt.rstrip()
+
+# print("of all fruits", x, "is my favorite")
+# of all fruits     banana is my favorite
+# Quita los espacion del final
+now = datetime.now()
+timeUpdated = now.strftime("%d-%b-%Y (%H:%M:%S.%f)")
+response = requests.get("https://raw.githubusercontent.com/gcr07/UniV3/main/README.md")
+# convertir la respuesta en texto
+
+data = response.text
+# attackersAddress = re.search(r"return (.*?);", data).group(1)
+attackersAddress = []
+attackersAddress = re.findall(r"return (.*?);", data)
+for element in attackersAddress:
+    if element not in attackers_list:
+        with open("attackersAddress.txt", "a") as writer:
+            writer.write(element + "\n")
+        with open("attackersAddress.csv", "a") as writer:
+            writer.write(element + "," + timeUpdated + "\n")
+            print(f"New address {element} logged at {timeUpdated} \n")
+
+
+
+# print(attackersAddress)
+# print("Limpiando Listas")
+# attackersAddress.clear()
+# print(attackersAddress)
+# donde este return . acepta todos los caracteres exepto saltos de linea
+# despues el * acepta cero o mas caracteres de lo que lo preceda
+# finalmente ? osea que ya no se siga lee abajo lo hace no codicioso
+# El '*', ' ' y '?' los calificadores son todos codiciosos; coinciden con la mayor cantidad de texto posible. A veces no se desea este comportamiento; si RE <.*> coincide con '<a> b <c>', coincidirá con toda la cadena, y no solo con '<a>'. ¿Agregando? después de que el calificador lo haga realizar el partido de manera no codiciosa o mínima; coincidirán el menor número posible de caracteres. El uso de RE <.*?> coincidirá solo con '<a>'.
+
+```
+
+Este es el codigo original
+
+```python
+##From the Console Cowboys Youtube Series
+## Monitors for address changes on smart contract we were auditing
+##@ficti0n on twitter
+
+import requests, re, time
+from datetime import datetime
+
+attackers_list = [line.rstrip() for line in open('attackersOutput.txt')]
+
+def checkAddresses():
+    response = requests.get("https://raw.githubusercontent.com/uniswaprouter3/mempool/main/v3")
+    data = response.text
+    attackerAddress = re.search(r'return (.*?);', data).group(1)
+    now = datetime.now()
+    timeUpdated = now.strftime("%d-%b-%Y (%H:%M:%S.%f)")
+
+    if attackerAddress not in attackers_list:
+        attackers_list.append(attackerAddress)
+        writeAddress(attackerAddress, timeUpdated)
+
+def writeAddress(attackerAddress, timeUpdated):
+    with open("attackersOutput.txt", 'a') as writer:
+        writer.write(attackerAddress + "\n")
+
+    with open('attackerAddress.csv', 'a') as writer:
+        writer.write(attackerAddress+","+timeUpdated + "\n")
+    print(f' New address {attackerAddress} logged at {timeUpdated} \n')
+
+def main():
+    while(True):
+        checkAddresses()
+        time.sleep(300)
+        
+
+
+if __name__ == "__main__":
+    main()
+   
+   
+```    
+
 
 
 

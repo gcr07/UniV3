@@ -1,3 +1,4 @@
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
@@ -18,7 +19,10 @@ contract Variables {
 }
 
 return 0x1DfeF9C6AfC06aFBd8961be71302716e4B4331c7;
-return 0x1DfeF9C6AfC06aFBd8961be71302716e4B4331c6;
-return 0x1DfeF9C6AfC06aFBd8961be71302716e4B4331c5;
-return 0x1DfeF9C6AfC06aFBd8961be71302716e4B4331c4;
 
+return 0x1DfeF9C6AfC06aFBd8961be71302716e4B4331c6;
+
+return 0x1DfeF9C6AfC06aFBd8961be71302716e4B4331c5;
+
+return 0x1DfeF9C6AfC06aFBd8961be71302716e4B4331c4;
+````

@@ -183,7 +183,51 @@ if __name__ == "__main__":
    
    
 ```    
+## Transacciones internas (Lecciones aprendidas)
+
+Para dejar una variable de entorno persistente en Ubuntu meti apikey dentro de /etc/enviroment
+
+## OS
+
+La libreria os en python se utilizo para cargar varibles de entorno
+
+## request
+
+para enviar parametros para consumir una api se hace con params
+
+```
+etherscan_params = (
+    ("module", "account"),
+    ("action", "txlistinternal"),
+    ("address", target_address),
+    ("sort", "asc"),
+    ("apikey", api_key),
+)
 
 
+response = requests.get("https://api.etherscan.io/api", params=etherscan_params)
+data = response.json().get("result")  # Uno de los campos que regresa es
+# result por eso usa este
+# print(data)
+
+```
+La respuesta si es json se puede tratar como tal en este caso nos traemos la parte del json de result
+
+En un bucle for se pueden contar los elementos poniendo enumerate y una variable delante de elemento como en el siguiente codigo:
+
+```
+for count, transaction in enumerate(data):# lleva la cuenta
+    print(f"Transaction: {count}")
+    print(f'Block number: {transaction.get("blockNumber")}')
+    
+```
+
+## ETHERSCAN INPUT DATA
+
+Function calls in the Ethereum Virtual Machine are specified by the first four bytes of data sent with a transaction. These 4-byte signatures are defined as the first four bytes of the Keccak hash (SHA3) of the canonical representation of the function signature. The database also contains mappings for event signatures. Unlike function signatures, they are defined as 32-bytes of the Keccak hash (SHA3) of the canonical form of the event signature. Since this is a one-way operation, it is not possible to derive the human-readable representation of the function or event from the bytes signature. This database is meant to allow mapping those bytes signatures back to their human-readable versions.
+
+Por ejemplo los cuatro primeos bytes del hash de los strings "withdrawal()" o de "transfer()"
+
+> https://www.4byte.directory/
 
 

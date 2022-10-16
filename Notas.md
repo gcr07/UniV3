@@ -230,4 +230,12 @@ Por ejemplo los cuatro primeos bytes del hash de los strings "withdrawal()" o de
 
 > https://www.4byte.directory/
 
+## Flashbots
+
+Son un grupo de mineros que tienen un mempool provado y que te protegend e los ataques de sandwitch
+
+## Ataque Salmonela
+
+> https://github.com/Defi-Cartel/salmonella
+
 

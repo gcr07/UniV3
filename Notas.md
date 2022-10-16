@@ -232,6 +232,8 @@ Por ejemplo los cuatro primeos bytes del hash de los strings "withdrawal()" o de
 
 ## Sandwitch Attack
 
+Palabras clave en youtube "ethereum sandwich attack  explicacion"
+
  In a sandwich attack, a program will look for a pending transaction by another user on a blockchain network of their choice. The predatory trader will then place one trade order just before the victim’s pending transaction (front-running) and another trade order just after it (back-running). The victim’s pending transaction will be sandwiched between the two new trade orders created by the attacker. If the attack is successful, the attacker will create an artificial price increase and generate a profit. Sandwich attacks are partly possible because of transaction transparency in the mempool but also because DEXs allow price slippage during trades. Price slippage refers to the difference between the expected price of a trade and the actual trade execution price. DEXs usually allow for 1% slippage but in trading pools with lower liquidity, slippage can go up to 3% or higher. Now, let’s look at an example. First, the attacker will buy an asset the victim is trying to swap. For example, using WBTC to exchange to ETH. At the point of buying the asset, the attacker already knows that the price of ETH is increasing. They will proceed to buy ETH at a lower price so that the victim ends up buying it at a higher price. The attacker stands to gain as they end up selling the ETH they bought at a lower price, at a higher price immediately after.
  
  > https://www.youtube.com/watch?v=vh0VOkFe-Ew

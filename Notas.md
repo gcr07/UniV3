@@ -246,4 +246,18 @@ Son un grupo de mineros que tienen un mempool provado y que te protegend e los a
 
 > https://github.com/Defi-Cartel/salmonella
 
+## Plugins para decodificar smartcontracts
+
+
+![image](https://user-images.githubusercontent.com/63270579/196963579-8d0633a3-83c9-469a-ba3d-3683bb6bdfcc.png)
+
+
+![image](https://user-images.githubusercontent.com/63270579/196963815-85f93b5b-c44d-47b3-a045-9f02a4478702.png)
+
+
+![image](https://user-images.githubusercontent.com/63270579/196964484-ca8ae597-9d6a-4551-b51b-6d0d18c9f7d1.png)
+
+
+
+
 

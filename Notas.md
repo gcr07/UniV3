@@ -258,6 +258,7 @@ Son un grupo de mineros que tienen un mempool provado y que te protegend e los a
 ![image](https://user-images.githubusercontent.com/63270579/196964484-ca8ae597-9d6a-4551-b51b-6d0d18c9f7d1.png)
 
 
+![image](https://user-images.githubusercontent.com/63270579/196965778-acecd210-e12f-4963-8f9d-59763ec4936f.png)
 
 
 

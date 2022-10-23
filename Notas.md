@@ -272,5 +272,21 @@ Ahi se ve que poniendolo como view si regresa un valor.
 De alguna forma cuando no se declara como view una funcion no regresa el valor osea:
 
 
+## Concatenar Strings en Solidity Actualizado a Abril 2022
+
+Desde la vercion In version 0.8.12 se incluyo concat.
+
+```
+
+string memory str_1 = 'hello ';
+string memory str_2 = "world";
 
 
+string memory result = string.concat(a, b);
+// result will be "hello world"
+
+```
+
+Fuente:
+
+> https://soliditytips.com/articles/concatenate-strings-solidity/

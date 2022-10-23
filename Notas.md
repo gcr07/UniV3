@@ -261,4 +261,16 @@ Son un grupo de mineros que tienen un mempool provado y que te protegend e los a
 ![image](https://user-images.githubusercontent.com/63270579/196965778-acecd210-e12f-4963-8f9d-59763ec4936f.png)
 
 
+## Enums
+
+![image](https://user-images.githubusercontent.com/63270579/197369798-884ddde1-55ae-433f-b480-1a7f9dbbca9c.png)
+
+![image](https://user-images.githubusercontent.com/63270579/197369820-756ec594-f58d-40e7-9323-eaa18d926cdd.png)
+
+Ahi se ve que poniendolo como view si regresa un valor.
+
+De alguna forma cuando no se declara como view una funcion no regresa el valor osea:
+
+
+
 

@@ -294,3 +294,7 @@ Fuente:
 Puedes sacar algunas ideas de aqui
 
 > https://github.com/eth-brownie/brownie/blob/master/docs/api-network.rst
+
+Calldata Storage memory
+
+> https://medium.com/coinmonks/solidity-storage-vs-memory-vs-calldata-8c7e8c38bce

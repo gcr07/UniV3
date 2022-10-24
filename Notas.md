@@ -287,6 +287,16 @@ string memory result = string.concat(a, b);
 
 ```
 
+## Solidity Pure vs View 
+
+
+1. Getter functions can be declared view or pure.
+
+2. View function declares that no state will be changed.
+
+3. Pure function declares that no state variable will be changed or read.
+
+
 Fuente:
 
 > https://soliditytips.com/articles/concatenate-strings-solidity/

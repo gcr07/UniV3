@@ -290,3 +290,7 @@ string memory result = string.concat(a, b);
 Fuente:
 
 > https://soliditytips.com/articles/concatenate-strings-solidity/
+
+Puedes sacar algunas ideas de aqui
+
+> https://github.com/eth-brownie/brownie/blob/master/docs/api-network.rst

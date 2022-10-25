@@ -296,6 +296,51 @@ string memory result = string.concat(a, b);
 
 3. Pure function declares that no state variable will be changed or read.
 
+## Errors assert require
+
+
+### require
+
+Para require si no se cumple la condicion aun en brownie si regresa el error
+
+![image](https://user-images.githubusercontent.com/63270579/197778893-0ef1903b-9406-40ef-853a-5ae408f9734d.png)
+
+![image](https://user-images.githubusercontent.com/63270579/197778962-d01e3a44-5259-455f-848c-d9cfe4aed944.png)
+
+![image](https://user-images.githubusercontent.com/63270579/197779130-857aba56-ea37-4e18-b908-177c83c6ddb6.png)
+
+
+### revert
+
+Basicamente hace lo mismo que require pero es para condiciones mas complejas
+
+![image](https://user-images.githubusercontent.com/63270579/197782163-2674a9dc-bcdc-4267-bd84-4f3f4531e597.png)
+
+### assert
+
+Si esta condicion que siempre deberia ser verdadera no se cumple se regresa un error como el que se muetra a continuacion:
+
+![image](https://user-images.githubusercontent.com/63270579/197784157-bf21d08c-608b-46c4-aa11-061cf92175fe.png)
+
+### Error custom
+
+Es basicamente lo mismo no logro ver el cambio si no mas bien como acomodar el codigo
+
+## Ver el balance del contrato 
+
+```
+address(this).balance
+
+```
+
+
+
+
+
+
+
+
+
 
 Fuente:
 

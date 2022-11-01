@@ -365,7 +365,19 @@ contract HelloWorld {
 
 ![image](https://user-images.githubusercontent.com/63270579/199267985-b19981fc-3e14-4b63-807f-c6c39d29ca81.png)
 
+# Contructores
 
+Para pasar informacion a un contructor debes de pasar al hacer el deploy como si de una funcion que pasa argumentos de tratara
+
+```
+def deploy_contract():
+    # account = accounts[0]
+    # account = accounts.load("1")
+    # account = accounts.add(config["wallets"] ["from_key"])
+    account = get_account()
+    hello = HelloWorld.deploy("Masa",{"from": account}) // AQUI PASAMOS LOS DATOS AL CONSTRUCTOR
+    print(hello)
+```
 
 Fuente:
 

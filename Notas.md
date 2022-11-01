@@ -365,7 +365,7 @@ contract HelloWorld {
 
 ![image](https://user-images.githubusercontent.com/63270579/199267985-b19981fc-3e14-4b63-807f-c6c39d29ca81.png)
 
-# Contructores
+# Constructores
 
 Para pasar informacion a un contructor debes de pasar al hacer el deploy como si de una funcion que pasa argumentos de tratara
 
@@ -378,6 +378,44 @@ def deploy_contract():
     hello = HelloWorld.deploy("Masa",{"from": account}) // AQUI PASAMOS LOS DATOS AL CONSTRUCTOR
     print(hello)
 ```
+
+# Herencia
+
+Cree este contrato para probar la herencia en solidity
+
+```
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.13;
+
+contract Animal {
+
+
+    function quesoy() public pure virtual returns (string memory) {
+        return "Soy un animal";
+    }
+}
+
+contract Mamifero is Animal {
+
+        // Override Animal.quesoy()
+    function quesoy() public pure virtual override returns (string memory) {
+        return "Soy un mamifero";
+
+    }
+}
+
+contract Felino is Animal, Mamifero {
+
+    function quesoy() public pure override(Animal, Mamifero) returns (string memory) {
+        return "Hola soy un Felino";
+        //return super.quesoy();
+    }
+
+}
+
+```
+
 
 Fuente:
 

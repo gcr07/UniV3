@@ -333,12 +333,36 @@ address(this).balance
 
 ```
 
+# Events
 
 
+Los eventos se generan en est caso mediant una transaccion desconozco si se podria sin una y solo enviarlos asi en brownie no encontre una manera rapida de ver estos eventos sin embargo encontre que se pueden ver en etherscan y pues usanod las herramientas que ya sabes descifrar mas o menos que es lo que esta pasando dejo esta direccion de tx para que en el futuro veas como funciona sin perder tanto tiempo
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.13;
+
+contract HelloWorld {
+    // Event declaration
+    // Up to 3 parameters can be indexed.
+    // Indexed parameters helps you filter the logs by the indexed parameter
+    event Log(address indexed sender, string message);
+    event AnotherLog();
+
+    function test() public {
+        emit Log(msg.sender, "Hello World!");
+        emit Log(msg.sender, "Hello EVM!");
+        emit AnotherLog();
+    }
+}
+
+<Transaction '0x0060f184c5fc43db67ca708bbf785b9edbd0ce176b5d2bcef86afb7feb5eaa62'>
 
 
+```
 
 
+![image](https://user-images.githubusercontent.com/63270579/199267985-b19981fc-3e14-4b63-807f-c6c39d29ca81.png)
 
 
 
